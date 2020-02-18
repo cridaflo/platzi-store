@@ -1,2 +1,36 @@
+<form [formGroup]="form" (ngSubmit)="logIn($event)">
+<mat-card>
+    <mat-card-header>Inicio de sesión</mat-card-header>
 
-<p>contact works!</p>
+    <mat-card-content>
+
+        <div class="row">
+            <div class="col-xs">
+                <mat-form-field>
+                    <input placeholder="e-mail" formControlName="email" matInput type="text">
+                </mat-form-field>
+                <div *ngIf="userField.errors && userField.dirty"> 
+                    <p *ngIf="userField.hasError('required')">El campo es requerido</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs">
+                <mat-form-field>
+                    <input placeholder="contraseña" formControlName="password" matInput type="password">
+                </mat-form-field>
+                <div *ngIf="passwordField.errors && passwordField.dirty"> 
+                    <p *ngIf="passwordField.hasError('required')">El campo es requerido</p>
+                    <p *ngIf="passwordField.hasError('minlength')">La contraseña es muy corta</p>
+                </div>
+            </div>
+        </div>
+
+    </mat-card-content>
+    
+    <mat-card-actions>
+        <button mat-raised-button  [disabled]="form.invalid" type="submit">Iniciar sesión</button>
+    </mat-card-actions>
+</mat-card>
+</form>
