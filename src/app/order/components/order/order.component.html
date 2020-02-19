@@ -1,7 +1,7 @@
  <mat-horizontal-stepper>
     <mat-step>
         <ng-template matStepLabel> Sus productos</ng-template>
-        <div *ngIf="(products$ | async) as products">
+        <div *ngIf="((products$ | async) | agruparProductos) as products">
             <p *ngIf ="products.length === 0"> No hay productos</p>
             <div class="row" *ngFor="let product of products ">
                 <div class="col-xs-3">

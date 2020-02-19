@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { MaterialModule } from './../material/material.module';
 import { CartComponent } from './components/cart/cart.component'
 import { ReactiveFormsModule } from '@angular/forms';
+import {AgruparProductosPipe} from './pipes/agrupar/agrupar-productos.pipe';
 
 @NgModule({
   declarations: [
@@ -16,12 +17,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     HeaderComponent,
     FooterComponent,
     CartComponent,
+    AgruparProductosPipe,
   ],
   exports: [
     ExponentialPipe,
     HighlightDirective,
     HeaderComponent,
     FooterComponent,
+    AgruparProductosPipe,
   ],
   imports: [
     CommonModule,
