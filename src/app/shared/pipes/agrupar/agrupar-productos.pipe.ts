@@ -7,7 +7,7 @@ import { Observable, from } from 'rxjs';
 })
 export class AgruparProductosPipe implements PipeTransform {
 
-  productsCount: Product[];
+  productsCount= [];
 
   // transform(products: Product[]): any {
   //   const newProduct: Product = {
@@ -19,11 +19,18 @@ export class AgruparProductosPipe implements PipeTransform {
   //   };
   transform(products: Product[]): any {
     products.forEach( product => {
-      const index = this.productsCount.findIndex(prod => product.id === prod.id);
+      const index = this.productsCount.findIndex(prod => product.id === prod.prod.id);
       if (index < 0){
-        this.productsCount.push(product);
+        this.productsCount.push({
+          prod: product,
+          count: 1
+        });
+      }
+      else{
+        this.productsCount[index].count+=1;
       }
     });
+
     return this.productsCount;
   }
 
