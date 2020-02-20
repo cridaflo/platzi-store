@@ -1,0 +1,15 @@
+[debug] [2020-02-20T18:16:32.372Z] ----------------------------------------------------------------------
+[debug] [2020-02-20T18:16:32.374Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\chrflopi\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js login
+[debug] [2020-02-20T18:16:32.374Z] CLI Version:   7.13.1
+[debug] [2020-02-20T18:16:32.374Z] Platform:      win32
+[debug] [2020-02-20T18:16:32.374Z] Node Version:  v12.13.1
+[debug] [2020-02-20T18:16:32.375Z] Time:          Thu Feb 20 2020 13:16:32 GMT-0500 (GMT-05:00)
+[debug] [2020-02-20T18:16:32.375Z] ----------------------------------------------------------------------
+[debug] [2020-02-20T18:16:32.375Z] 
+[info] i  Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://accounts.google.com/o/oauth2/auth?client_id=563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com&scope=email%20openid%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloudplatformprojects.readonly%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Ffirebase%20https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fcloud-platform&response_type=code&state=1020286290&redirect_uri=http%3A%2F%2Flocalhost%3A9005
+[info] 
+[info] Waiting for authentication...
