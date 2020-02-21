@@ -26,6 +26,13 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  loginApi(){
+    this.authService.loginRestApi('yo@yo.com', '12345678')
+    .subscribe(data => {
+      console.log(data);
+    });
+  }
+
   logIn(event: Event) {
     event.preventDefault();
     console.log(this.form.valid);

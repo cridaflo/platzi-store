@@ -31,6 +31,7 @@
         
         <mat-card-actions>
             <button mat-raised-button  [disabled]="form.invalid" type="submit">Iniciar sesión</button>
+            <button mat-raised-button  [disabled]="form.invalid" type="button" (click)="loginApi()">Login api</button>
         </mat-card-actions>
     </mat-card>
 </form>
