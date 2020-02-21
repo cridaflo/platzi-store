@@ -61,7 +61,7 @@ export class ProductsService {
   }
 
   getFile(){
-    return this.http.get('assets/files/test.txt', {responseType: 'text'});
+    return this.http.get('assets/files/test.txt', {responseType: 'blob'});
   }
 
   private handleError(error: HttpErrorResponse){
