@@ -4,7 +4,7 @@ import { HttpClient, HttpErrorResponse} from '@angular/common/http';
 import { environment } from '@environments/environment';
 import { Observable,  throwError } from 'rxjs';
 import { map, tap, catchError } from 'rxjs/operators';
-
+import * as Sentry from '@sentry/browser';
 
 interface User{
   email: string;
@@ -61,6 +61,7 @@ export class ProductsService {
 
   private handleError(error: HttpErrorResponse){
     console.log(error);
+    Sentry.captureException(error);
     return throwError('flayo re duro');
   }
 }
