@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
-import {ProductsService} from './../../../core/services/products/products.service';
-import {Product} from './../../../core/models/product.model';
+import {ProductsService} from '@core/services/products/products.service';
+import {Product} from '@core/models/product.model';
 
 @Component({
   selector: 'app-product-detail',
@@ -37,12 +37,12 @@ export class ProductDetailComponent implements OnInit {
 
   createProduct() {
       const newProduct: Product = {
-      id: '6',
-      title: 'stickers 2',
-      image: 'assets/images/stickers2.png',
-      price: 3000,
-      description: 'Stickers que borré'
-    };
+        id: '6',
+        image: 'assets/images/stickers2.png',
+        title: 'Stickers',
+        price: 80000,
+        description: 'bla bla bla bla bla'
+      };
       this.productsService.createProduct(newProduct)
     .subscribe(product => {
       console.log(product);
@@ -61,7 +61,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   deleteProduct(){
-    const id: string = '6';
+    const id: string = 'sdf';
     this.productsService.deleteProduct(id).subscribe( resp => {
       console.log(resp);
     });

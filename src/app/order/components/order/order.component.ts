@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from './../../../core/models/product.model';
+import { Product } from '@core/models/product.model';
 import { Observable, from } from 'rxjs';
-import { CartService} from './../../../core/services/cart.service';
+import { CartService} from '@core/services/cart.service';
 
 
 @Component({

@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Product } from './../../../core/models/product.model';
+import { Product } from '@core/models/product.model';
 import { Observable, from } from 'rxjs';
 
 @Pipe({
