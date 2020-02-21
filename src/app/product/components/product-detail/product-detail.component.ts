@@ -26,7 +26,7 @@ export class ProductDetailComponent implements OnInit {
       })
     );
   }
-  
+
 
   createProduct() {
       const newProduct: Product = {
@@ -58,5 +58,12 @@ export class ProductDetailComponent implements OnInit {
     this.productsService.deleteProduct(id).subscribe( resp => {
       console.log(resp);
     });
+  }
+
+  getRandomUser(){
+    this.productsService.gerRandomUser()
+    .subscribe(users => {
+      console.log(users);
+    })
   }
 }

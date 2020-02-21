@@ -2,6 +2,15 @@ import { Injectable } from '@angular/core';
 import {Product} from '@core/models/product.model';
 import { HttpClient, HttpClientModule} from '@angular/common/http';
 import { environment } from '@environments/environment';
+import { Observable } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
+
+
+interface User{
+  email: string;
+  gender: string;
+  phone: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -30,5 +39,13 @@ export class ProductsService {
 
   deleteProduct(id: string){
     return this.http.delete(`${environment.url_api}/products/${id}`);
+  }
+
+  gerRandomUser() : Observable<User[]>{
+    return this.http.get('https://randomuser.me/api/?results=2')
+    .pipe(
+      map((response: any) => response.results as User[]),
+      tap((response: any) =>console.log(response))
+    );
   }
 }
