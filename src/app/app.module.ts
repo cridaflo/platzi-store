@@ -11,6 +11,8 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '@environments/environment';
 import { AngularFireAuthModule} from '@angular/fire/auth';
 import { AngularFireStorageModule } from '@angular/fire/storage';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthInterceptor} from './auth.interceptor';
 import * as Sentry from '@sentry/browser';
 
 Sentry.init({
@@ -33,7 +35,11 @@ Sentry.init({
     AngularFireAuthModule,
     AngularFireStorageModule,
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

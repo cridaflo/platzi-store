@@ -8,12 +8,22 @@ export class AuthInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>>{
 
+    request = this.addToken(request);
+    return next.handle(request);
   }
 
   private addToken(request: HttpRequest<any>){
     const token = '123';
     if (true) {
-      request = request.clone();
+      request = request.clone({
+        setHeaders: {
+          token,
+        },
+      });
+      return request;
     }
+    return request;
   }
+
+
 }
