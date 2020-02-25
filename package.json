@@ -7,7 +7,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "analyzer": "npx webpack-bundle-analyzer dist/platzi-store/stats-es2015.json "
   },
   "private": true,
   "dependencies": {
@@ -31,6 +32,7 @@
     "file-saver": "^2.0.2",
     "firebase": "^7.8.2",
     "flexboxgrid": "^6.3.1",
+    "ngx-quicklink": "^0.2.0",
     "rxjs": "~6.5.4",
     "swiper": "^5.3.1",
     "tslib": "^1.10.0",

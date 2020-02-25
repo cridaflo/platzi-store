@@ -9,6 +9,7 @@ import { MaterialModule } from '@material/material.module';
 import { CartComponent } from './components/cart/cart.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import {AgruparProductosPipe} from './pipes/agrupar/agrupar-productos.pipe';
+import { QuicklinkModule } from 'ngx-quicklink';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {AgruparProductosPipe} from './pipes/agrupar/agrupar-productos.pipe';
     RouterModule,
     MaterialModule,
     ReactiveFormsModule,
+    QuicklinkModule
   ]
 })
 export class SharedModule { }
