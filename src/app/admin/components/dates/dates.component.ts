@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as moment from 'moment';
+import { addDays, format } from 'date-fns';
 
 @Component({
   selector: 'app-dates',
@@ -8,12 +8,16 @@ import * as moment from 'moment';
 })
 export class DatesComponent implements OnInit {
 
-  fecha;
+  date: string;
+
   constructor() {
-    this.fecha = moment().format( 'YYYY/MMMM/DD');
+    // this.fecha = moment().format( 'YYYY/MMMM/DD');
   }
 
+
   ngOnInit(): void {
+    const addNewDays = addDays(new Date(), 20);
+    this.date = format(addNewDays, 'yyyy/MMMM/dd');
   }
 
 }
