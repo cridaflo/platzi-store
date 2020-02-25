@@ -17,6 +17,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatMenuModule } from '@angular/material/menu';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatStepperModule} from '@angular/material/stepper';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [],
@@ -39,6 +40,7 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatMenuModule,
     MatFormFieldModule,
     MatStepperModule,
+    MatChipsModule,
     ],
   exports: [
     MatButtonModule,
@@ -58,6 +60,7 @@ import {MatStepperModule} from '@angular/material/stepper';
     MatMenuModule,
     MatFormFieldModule,
     MatStepperModule,
+    MatChipsModule,
   ]
 })
 export class MaterialModule { }
