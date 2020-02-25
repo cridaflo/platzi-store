@@ -15,6 +15,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthInterceptor} from './auth.interceptor';
 import * as Sentry from '@sentry/browser';
 import { QuicklinkModule } from 'ngx-quicklink';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 Sentry.init({
   dsn: 'https://b8a0b24ede2647cbb4412aeed366bcbe@sentry.io/2745470'
@@ -26,7 +27,7 @@ Sentry.init({
     LayoutComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     SharedModule,
     CoreModule,
@@ -36,6 +37,7 @@ Sentry.init({
     AngularFireAuthModule,
     AngularFireStorageModule,
     QuicklinkModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
