@@ -10,6 +10,7 @@ import { CartComponent } from './components/cart/cart.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import {AgruparProductosPipe} from './pipes/agrupar/agrupar-productos.pipe';
 import { QuicklinkModule } from 'ngx-quicklink';
+import { FibonacciPipe } from './pipes/fibonacci.pipe';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { QuicklinkModule } from 'ngx-quicklink';
     FooterComponent,
     CartComponent,
     AgruparProductosPipe,
+    FibonacciPipe,
   ],
   exports: [
     ExponentialPipe,
@@ -26,6 +28,7 @@ import { QuicklinkModule } from 'ngx-quicklink';
     HeaderComponent,
     FooterComponent,
     AgruparProductosPipe,
+    FibonacciPipe,
   ],
   imports: [
     CommonModule,
