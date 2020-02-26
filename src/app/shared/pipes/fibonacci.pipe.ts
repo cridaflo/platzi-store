@@ -2,7 +2,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 
 const fibonacci = (num: number): number => {
-  
   if (num === 1 || num === 2) {
     return 1;
   }
